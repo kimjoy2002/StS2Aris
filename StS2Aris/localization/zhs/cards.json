@@ -158,6 +158,7 @@
   "STS2ARIS-GAME_SCENARIO.title.betaTest": "Beta测试",
   "STS2ARIS-GAME_SCENARIO.title.talesSagaChronicle": "传说物语编年史",
   "STS2ARIS-GAME_SCENARIO.description": "{GeneratedDescription}",
+  "STS2ARIS-GAME_SCENARIO.selectionScreenPrompt": "选择一张要复制的牌。",
   "STS2ARIS-GAME_SCENARIO.description.empty": "会生成什么牌呢？\n生成之前谁也不知道。",
   "STS2ARIS-GAME_SCENARIO.description.loseHp": "失去{LoseHp:diff()}点生命。",
   "STS2ARIS-GAME_SCENARIO.description.damage": "造成{Damage:diff()}点伤害。",

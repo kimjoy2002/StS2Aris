@@ -162,6 +162,7 @@ public static class MomoiScenarioGenerator
         new(MomoiScenarioAbility.AutoPlayFromExhaust, MomoiScenarioCardTypes.Any, 5, 40, 1, 1)
     ];
 
+
     private static readonly MomoiScenarioAbility[][] Exclusions =
     [
         [MomoiScenarioAbility.DamageAll, MomoiScenarioAbility.DamageRepeat, MomoiScenarioAbility.DamageRandom, MomoiScenarioAbility.DamageRandomRepeat],
@@ -169,7 +170,7 @@ public static class MomoiScenarioGenerator
         [MomoiScenarioAbility.Weak, MomoiScenarioAbility.WeakAll, MomoiScenarioAbility.Vulnerable, MomoiScenarioAbility.VulnerableAll, MomoiScenarioAbility.WeakAndVulnerable],
         [MomoiScenarioAbility.ExhaustOther, MomoiScenarioAbility.ExhaustOtherRandom, MomoiScenarioAbility.DiscardAll, MomoiScenarioAbility.ExhaustAll],
         [MomoiScenarioAbility.DiscardOther, MomoiScenarioAbility.DiscardOtherRandom, MomoiScenarioAbility.DiscardAll, MomoiScenarioAbility.ExhaustAll],
-        [MomoiScenarioAbility.DiscardOther, MomoiScenarioAbility.ExhaustOther, MomoiScenarioAbility.Upgrade],
+        [MomoiScenarioAbility.ExhaustOther,  MomoiScenarioAbility.DiscardOther,  MomoiScenarioAbility.Upgrade, MomoiScenarioAbility.Copy],
         [MomoiScenarioAbility.Energy, MomoiScenarioAbility.EnergyTwo],
         [MomoiScenarioAbility.Retain, MomoiScenarioAbility.Ethereal],
         [MomoiScenarioAbility.LoseHp],

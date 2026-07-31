@@ -1,8 +1,7 @@
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
@@ -21,14 +20,14 @@ public sealed class MomoiAppearPower : StS2ArisPower
     [SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
     public int Refusals { get; set; }
 
-    public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        if (side != CombatSide.Player || !participants.Contains(Owner) || Owner.Player == null)
+        var combatState = CombatState;
+        if (player != Owner.Player || Owner.IsDead || combatState == null)
         {
             return;
         }
 
-        var player = Owner.Player;
         var scenarios = Enumerable.Range(0, Math.Max(1, Amount))
             .Select(_ => MomoiScenarioGenerator.Create(player, combatState, Refusals))
             .Cast<CardModel>()
@@ -56,7 +55,7 @@ public sealed class MomoiAppearPower : StS2ArisPower
         InvokeDisplayAmountChanged();
     }
 
-    private static async Task<CardModel?> ChooseScenario(PlayerChoiceContext choiceContext, IReadOnlyList<CardModel> choices, MegaCrit.Sts2.Core.Entities.Players.Player player)
+    private static async Task<CardModel?> ChooseScenario(PlayerChoiceContext choiceContext, IReadOnlyList<CardModel> choices, Player player)
     {
         if (choices.Count <= 3)
         {

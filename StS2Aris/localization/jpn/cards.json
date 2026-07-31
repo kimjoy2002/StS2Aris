@@ -158,6 +158,7 @@
   "STS2ARIS-GAME_SCENARIO.title.betaTest": "ベータテスト",
   "STS2ARIS-GAME_SCENARIO.title.talesSagaChronicle": "テイルズサーガクロニクル",
   "STS2ARIS-GAME_SCENARIO.description": "{GeneratedDescription}",
+  "STS2ARIS-GAME_SCENARIO.selectionScreenPrompt": "コピーするカードを選択。",
   "STS2ARIS-GAME_SCENARIO.description.empty": "どんなカードが作られるのでしょうか？\n作られるまでは分かりません。",
   "STS2ARIS-GAME_SCENARIO.description.loseHp": "HPを{LoseHp:diff()}失う。",
   "STS2ARIS-GAME_SCENARIO.description.damage": "{Damage:diff()}ダメージを与える。",

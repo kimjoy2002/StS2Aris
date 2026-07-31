@@ -158,6 +158,7 @@
   "STS2ARIS-GAME_SCENARIO.title.betaTest": "Beta Test",
   "STS2ARIS-GAME_SCENARIO.title.talesSagaChronicle": "Tales Saga Chronicle",
   "STS2ARIS-GAME_SCENARIO.description": "{GeneratedDescription}",
+  "STS2ARIS-GAME_SCENARIO.selectionScreenPrompt": "Choose a card to copy.",
   "STS2ARIS-GAME_SCENARIO.description.empty": "What kind of card will be created?\nYou won’t know until it is made.",
   "STS2ARIS-GAME_SCENARIO.description.loseHp": "Lose {LoseHp:diff()} HP.",
   "STS2ARIS-GAME_SCENARIO.description.damage": "Deal {Damage:diff()} damage.",
