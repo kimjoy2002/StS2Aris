@@ -10,7 +10,7 @@ using StS2Aris.StS2ArisCode.Keywords;
 namespace StS2Aris.StS2ArisCode.Cards;
 
 [Pool(typeof(StS2ArisCardPool))]
-public class EquipHotkey() : StS2ArisCard(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+public class EquipHotkey() : StS2ArisCard(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate, CardKeyword.Exhaust];
 

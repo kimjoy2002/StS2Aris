@@ -33,6 +33,6 @@ public class QuestClear() : StS2ArisCard(1, CardType.Skill, CardRarity.Uncommon,
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Magic"].UpgradeValueBy(1m);
+        DynamicVars["CalculatedBlockBase"].UpgradeValueBy(3m);
     }
 }

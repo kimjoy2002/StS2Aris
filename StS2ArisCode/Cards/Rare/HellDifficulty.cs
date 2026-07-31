@@ -57,6 +57,5 @@ public class HellDifficulty() : ArisQuestCard<StrategyGuide>(1, CardType.Skill, 
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Cards.UpgradeValueBy(1m);
     }
 }

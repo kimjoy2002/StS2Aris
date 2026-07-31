@@ -13,8 +13,8 @@ public class SystemRecovery() : StS2ArisCard(1, CardType.Power, CardRarity.Uncom
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("SelfDamage", 3m),
-        new PowerVar<SystemRecoveryPower>(2m)
+        new DynamicVar("SelfDamage", 2m),
+        new PowerVar<SystemRecoveryPower>(1m)
     ];
 
     protected override async Task OnArisPlay(PlayerChoiceContext choiceContext, CardPlay play)

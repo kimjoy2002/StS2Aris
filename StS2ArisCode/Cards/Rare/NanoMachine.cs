@@ -14,7 +14,7 @@ public class NanoMachine() : StS2ArisCard(1, CardType.Skill, CardRarity.Rare, Ta
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new PowerVar<NanoMachinePower>(9m)
+        new PowerVar<NanoMachinePower>(8m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

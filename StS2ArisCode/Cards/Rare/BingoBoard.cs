@@ -49,7 +49,7 @@ public class BingoBoard() : ArisQuestCard<BingoBoard>(1, CardType.Power, CardRar
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new PowerVar<DexterityPower>(2m),
-        new MaxHpVar(7m)
+        new MaxHpVar(9m)
     ];
 
     protected override async Task OnArisPlay(PlayerChoiceContext choiceContext, CardPlay play)

@@ -34,9 +34,9 @@ public class Firewall() : StS2ArisCard(2, CardType.Skill, CardRarity.Uncommon, T
 
         foreach (var opponent in CombatState.GetOpponentsOf(Owner.Creature))
         {
-            await PowerCmd.Apply<WeakPower>(choiceContext, opponent, DynamicVars["Weak"].IntValue, Owner.Creature,
-                this);
             await PowerCmd.Apply<ShockPower>(choiceContext, opponent, DynamicVars["ShockPower"].IntValue, Owner.Creature,
+                this);
+            await PowerCmd.Apply<WeakPower>(choiceContext, opponent, DynamicVars["Weak"].IntValue, Owner.Creature,
                 this);
         }
     }

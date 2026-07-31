@@ -23,7 +23,7 @@ public class HoldOn() : StS2ArisCard(1, CardType.Skill, CardRarity.Common, Targe
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new HpLossVar(3),
-        new DynamicVar("Repair", 14m)
+        new DynamicVar("Repair", 13m)
     ];
 
     protected override async Task OnArisPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -34,6 +34,6 @@ public class HoldOn() : StS2ArisCard(1, CardType.Skill, CardRarity.Common, Targe
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Repair"].UpgradeValueBy(5m);
+        DynamicVars["Repair"].UpgradeValueBy(4m);
     }
 }

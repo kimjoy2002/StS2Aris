@@ -30,7 +30,7 @@ public class AtrahasisSuperNova() : StS2ArisEquipmentCard(1, CardType.Attack, Ca
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(16, ValueProp.Move),
+        new DamageVar(12, ValueProp.Move),
         new PowerVar<StrengthPower>(5m)
     ];
 

@@ -28,6 +28,6 @@ public class EmergencyPower() : StS2ArisCard(1, CardType.Power, CardRarity.Uncom
 
     protected override void OnUpgrade()
     {
-        DynamicVars["EmergencyPowerPower"].UpgradeValueBy(1m);
+        EnergyCost.UpgradeBy(-1);
     }
 }
