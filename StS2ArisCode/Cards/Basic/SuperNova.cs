@@ -16,7 +16,7 @@ using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
 using StS2Aris.StS2ArisCode.CardModels;
 using StS2Aris.StS2ArisCode.Character;
-using StS2Aris.StS2ArisCode.Config;
+using StS2Aris.StS2ArisCode.Mechanics;
 using StS2Aris.StS2ArisCode.Events;
 using StS2Aris.StS2ArisCode.Keywords;
 using StS2Aris.StS2ArisCode.Powers;
@@ -58,7 +58,7 @@ public class SuperNova() : StS2ArisEquipmentCard(1, CardType.Attack, CardRarity.
     public override EventModel ModifyNextEvent(EventModel currentEvent)
     {
         var runState = Owner.RunState;
-        if (runState.Players.Count > 1 || !ArisModConfig.ForceClassAltarFirstEvent)
+       if (!ClassAltarHostSettingSync.IsEnabled)
         {
             return currentEvent;
         }
