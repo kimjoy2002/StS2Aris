@@ -57,12 +57,12 @@ public class SuperNova() : StS2ArisEquipmentCard(1, CardType.Attack, CardRarity.
 
     public override EventModel ModifyNextEvent(EventModel currentEvent)
     {
-        if (!ArisModConfig.ForceClassAltarFirstEvent)
+        var runState = Owner.RunState;
+        if (runState.Players.Count > 1 || !ArisModConfig.ForceClassAltarFirstEvent)
         {
             return currentEvent;
         }
 
-        var runState = Owner.RunState;
         bool hasVisitedNormalEvent = runState.MapPointHistory
             .SelectMany(actHistory => actHistory)
             .Any(entry => entry.MapPointType != MapPointType.Ancient && entry.HasRoomOfType(RoomType.Event));
