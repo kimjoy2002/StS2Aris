@@ -18,12 +18,11 @@ using StS2Aris.StS2ArisCode.Powers;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 [Pool(typeof(TokenCardPool))]
-public class NeatCompression() : StS2ArisCard(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+public class NeatCompression() : StS2ArisCard(0, CardType.Power, CardRarity.Token, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromKeyword(ArisKeywords.Reward),
-        HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
+        HoverTipFactory.FromKeyword(ArisKeywords.Reward)
     ];
 
     protected override async Task OnArisPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -52,5 +51,5 @@ public class NeatCompression() : StS2ArisCard(0, CardType.Skill, CardRarity.Toke
         }
     }
 
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [];
 }

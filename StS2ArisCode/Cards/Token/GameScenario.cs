@@ -236,7 +236,6 @@ public class GameScenario() : StS2ArisCard(1, CardType.Skill, CardRarity.Token, 
     public int ScenarioChronicleNumber { get; set; }
 
     public override CardType Type => ScenarioType == (int)CardType.Attack ? CardType.Attack : CardType.Skill;
-    protected override int CanonicalEnergyCost => ScenarioCost;
 
     private bool HasGameArt => Enchantment is Inky or Swift;
     private bool HasFinalRelease => ScenarioFinalRelease;
@@ -483,6 +482,7 @@ public class GameScenario() : StS2ArisCard(1, CardType.Skill, CardRarity.Token, 
     {
         ScenarioType = type == CardType.Attack ? (int)CardType.Attack : (int)CardType.Skill;
         ScenarioCost = cost;
+        EnergyCost.SetCustomBaseCost(ScenarioCost);
         RefreshGeneratedValues();
     }
 

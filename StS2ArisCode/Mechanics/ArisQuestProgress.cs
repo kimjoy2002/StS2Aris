@@ -16,7 +16,18 @@ public static class ArisQuestProgress
 
     public static int CountCompletedQuests(Player? player)
     {
-        return player == null ? 0 : CompletedQuestCount.Get(player);
+        if (player == null)
+        {
+            return 0;
+        }
+
+        int recordedCount = player.RunState.MapPointHistory
+            .SelectMany(static act => act)
+            .SelectMany(static entry => entry.PlayerStats)
+            .Where(entry => entry.PlayerId == player.NetId)
+            .Sum(static entry => entry.CompletedQuests.Count);
+
+        return Math.Max(CompletedQuestCount.Get(player), recordedCount);
     }
 
     public static int CountCompletedQuestTypes(Player? player)

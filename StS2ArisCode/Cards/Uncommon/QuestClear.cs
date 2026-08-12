@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -16,23 +17,52 @@ namespace StS2Aris.StS2ArisCode.Cards;
 [Pool(typeof(StS2ArisCardPool))]
 public class QuestClear() : StS2ArisCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
+    private const int BaseBlock = 8;
+    private const int UpgradeBlock = 3;
+
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(ArisKeywords.Quest)];
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DynamicVar("Magic", 2m),
-        ..MakeCalculatedBlock("CalculatedBlock", 8, (card, _) =>
+        ..MakeCalculatedBlock("CalculatedBlock", BaseBlock, (card, _) =>
             ArisQuestUtils.CountCompletedQuests(card.Owner) * card.DynamicVars["Magic"].IntValue)
     ];
 
     protected override async Task OnArisPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardBlock(this, DynamicVars["CalculatedBlock"], play);
+        decimal block = DynamicVars["CalculatedBlockBase"].BaseValue
+                        + DynamicVars["CalculatedBlockExtra"].BaseValue
+                        * ArisQuestUtils.CountCompletedQuests(Owner)
+                        * DynamicVars["Magic"].IntValue;
+        await CreatureCmd.GainBlock(Owner.Creature, block, ValueProp.Move, play);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars["CalculatedBlockBase"].UpgradeValueBy(3m);
+        DynamicVars["CalculatedBlockBase"].UpgradeValueBy(UpgradeBlock);
+    }
+
+    protected override void AddExtraArgsToDescription(LocString description)
+    {
+        base.AddExtraArgsToDescription(description);
+        if (Owner == null || CombatState != null || Pile?.Type != PileType.Deck)
+        {
+            return;
+        }
+
+        decimal block = DynamicVars["CalculatedBlockBase"].BaseValue
+                        + DynamicVars["CalculatedBlockExtra"].BaseValue
+                        * ArisQuestUtils.CountCompletedQuests(Owner)
+                        * DynamicVars["Magic"].IntValue;
+        var displayBlock = new BlockVar("CalculatedBlock", block, ValueProp.Move);
+        if (DynamicVars["CalculatedBlockBase"].WasJustUpgraded)
+        {
+            displayBlock.BaseValue -= UpgradeBlock;
+            displayBlock.UpgradeValueBy(UpgradeBlock);
+        }
+
+        description.Add(displayBlock);
     }
 }
