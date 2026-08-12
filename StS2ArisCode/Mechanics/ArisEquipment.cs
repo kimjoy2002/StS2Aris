@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Nodes.Cards;
 using StS2Aris.StS2ArisCode.Cards;
 using StS2Aris.StS2ArisCode.Hooks;
 using StS2Aris.StS2ArisCode.Powers;
+using StS2Aris.StS2ArisCode.Utils;
 
 namespace StS2Aris.StS2ArisCode.Mechanics;
 
@@ -52,7 +53,7 @@ public static class ArisEquipment
 
             if (previousJob.EquipmentCard != null)
             {
-                await ReturnEquipmentCard(previousJob.EquipmentCard, PileType.Discard);
+                await ReturnEquipmentCard(choiceContext, previousJob.EquipmentCard, PileType.Discard);
             }
 
             await PowerCmd.Remove(previousJob);
@@ -82,7 +83,7 @@ public static class ArisEquipment
         await PowerCmd.Remove(currentJob);
         if (currentJob.EquipmentCard != null)
         {
-            await ReturnEquipmentCard(currentJob.EquipmentCard, pileType);
+            await ReturnEquipmentCard(choiceContext, currentJob.EquipmentCard, pileType);
         }
 
         await CreatureCmd.TriggerAnim(player.Creature, "Idle", 0f);
@@ -112,7 +113,10 @@ public static class ArisEquipment
         }
     }
 
-    private static async Task ReturnEquipmentCard(CardModel equipmentCard, PileType pileType)
+    private static async Task ReturnEquipmentCard(
+        PlayerChoiceContext choiceContext,
+        CardModel equipmentCard,
+        PileType pileType)
     {
         if (!pileType.IsCombatPile())
         {
@@ -126,6 +130,13 @@ public static class ArisEquipment
             if (returningCard.HasBeenRemovedFromState || !combatState.ContainsCard(returningCard))
             {
                 returningCard = combatState.CloneCard(equipmentCard);
+            }
+
+            if (returningCard.Keywords.Contains(CardKeyword.Exhaust))
+            {
+                CardExhaustVfxCompat.Play(returningCard);
+                await CardCmd.Exhaust(choiceContext, returningCard);
+                return;
             }
 
             var result = await CardPileCmd.Add(returningCard, pileType, clonedBy: equipmentCard);

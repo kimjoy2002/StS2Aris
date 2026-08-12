@@ -11,6 +11,8 @@ namespace StS2Aris.StS2ArisCode.Cards;
 public abstract class StS2ArisEquipmentCard(int cost, CardType type, CardRarity rarity, TargetType targetType)
     : StS2ArisCard(cost, type, rarity, targetType), IArisEquipmentCard
 {
+    private bool _repeatClassChangeForCurrentPlaySeries;
+
     public abstract ArisJobPower CreateJobPower();
 
     protected static T MakeJobPower<T>() where T : ArisJobPower
@@ -22,27 +24,55 @@ public abstract class StS2ArisEquipmentCard(int cost, CardType type, CardRarity 
     {
         if (play.PlayIndex > 0)
         {
+            if (_repeatClassChangeForCurrentPlaySeries &&
+                ArisEquipment.GetCurrentJob(Owner) is { } currentJob &&
+                ReferenceEquals(currentJob.EquipmentCard, this))
+            {
+                await TriggerClassChange(choiceContext, play, currentJob);
+            }
+
+            if (play.IsLastInSeries)
+            {
+                _repeatClassChangeForCurrentPlaySeries = false;
+            }
+
             return;
         }
 
         var nextJob = CreateJobPower();
-        if (ArisEquipment.ShouldTriggerClassChange(Owner, nextJob))
+        var changesJob = ArisEquipment.ShouldTriggerClassChange(Owner, nextJob);
+        _repeatClassChangeForCurrentPlaySeries = changesJob && play.PlayCount > 1;
+        if (changesJob)
         {
-            nextJob.EquipmentCard = this;
-            await nextJob.OnClassChange(choiceContext, play);
-            if (Owner.Creature.IsDead)
+            if (!await TriggerClassChange(choiceContext, play, nextJob))
             {
-                return;
-            }
-
-            await ArisHook.OnClassChanged(choiceContext, Owner, this);
-            if (Owner.Creature.IsDead)
-            {
+                _repeatClassChangeForCurrentPlaySeries = false;
                 return;
             }
         }
 
         await ArisEquipment.Equip(choiceContext, this, nextJob);
+
+        if (play.IsLastInSeries)
+        {
+            _repeatClassChangeForCurrentPlaySeries = false;
+        }
+    }
+
+    private async Task<bool> TriggerClassChange(
+        PlayerChoiceContext choiceContext,
+        CardPlay play,
+        ArisJobPower job)
+    {
+        job.EquipmentCard = this;
+        await job.OnClassChange(choiceContext, play);
+        if (Owner.Creature.IsDead)
+        {
+            return false;
+        }
+
+        await ArisHook.OnClassChanged(choiceContext, Owner, this);
+        return !Owner.Creature.IsDead;
     }
 
 }
