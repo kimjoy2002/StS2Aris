@@ -135,7 +135,7 @@ public static class ArisEquipment
             if (returningCard.Keywords.Contains(CardKeyword.Exhaust))
             {
                 CardExhaustVfxCompat.Play(returningCard);
-                await CardCmd.Exhaust(choiceContext, returningCard);
+                await CardCmdCompat.Exhaust(choiceContext, returningCard);
                 return;
             }
 

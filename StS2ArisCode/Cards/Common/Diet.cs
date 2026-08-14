@@ -16,6 +16,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 using StS2Aris.StS2ArisCode.Character;
 using StS2Aris.StS2ArisCode.Keywords;
 using StS2Aris.StS2ArisCode.Powers;
+using StS2Aris.StS2ArisCode.Utils;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 [Pool(typeof(StS2ArisCardPool))]
@@ -54,7 +55,7 @@ public class Diet() : ArisQuestCard<NeatCompression>(0, CardType.Skill, CardRari
 
         foreach (var card in selected.ToList())
         {
-            await CardCmd.Exhaust(choiceContext, card);
+            await CardCmdCompat.Exhaust(choiceContext, card);
         }
     }
 

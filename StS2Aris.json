@@ -3,7 +3,7 @@
   "name": "StS2Aris",
   "author": "joy1999",
   "description": "Slay the Spire 2 BlueArchive Aris character mod",
-  "version": "v1.0.15",
+  "version": "v1.0.16",
   "has_pck": true,
   "has_dll": true,
   "dependencies": [

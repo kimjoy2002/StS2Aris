@@ -815,7 +815,7 @@ public class GameScenario() : StS2ArisCard(1, CardType.Skill, CardRarity.Token, 
             var card = (await CardSelectCmd.FromHand(choiceContext, Owner, new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1), null, this)).FirstOrDefault();
             if (card != null)
             {
-                await CardCmd.Exhaust(choiceContext, card);
+                await CardCmdCompat.Exhaust(choiceContext, card);
             }
         }
 
@@ -824,7 +824,7 @@ public class GameScenario() : StS2ArisCard(1, CardType.Skill, CardRarity.Token, 
             var card = Owner.RunState.Rng.CombatCardSelection.NextItem(PileType.Hand.GetPile(Owner).Cards.Where(card => card != this));
             if (card != null)
             {
-                await CardCmd.Exhaust(choiceContext, card);
+                await CardCmdCompat.Exhaust(choiceContext, card);
             }
         }
 
@@ -848,7 +848,7 @@ public class GameScenario() : StS2ArisCard(1, CardType.Skill, CardRarity.Token, 
             var cards = PileType.Hand.GetPile(Owner).Cards.Where(card => card != this).ToList();
             foreach (var card in cards)
             {
-                await CardCmd.Exhaust(choiceContext, card);
+                await CardCmdCompat.Exhaust(choiceContext, card);
             }
         }
 
