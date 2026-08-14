@@ -102,7 +102,7 @@ public class StS2Aris : PlaceholderCharacterModel
 
     
 
-    public override CreatureAnimator GenerateAnimator(MegaSprite controller)
+    public override CreatureAnimator SetupCustomAnimationStates(MegaSprite controller)
     {
         var idle = new AnimState("idle_loop", true);
         var attack = new AnimState("attack", false) { NextState = idle };

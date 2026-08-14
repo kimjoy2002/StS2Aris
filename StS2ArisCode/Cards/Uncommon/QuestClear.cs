@@ -27,7 +27,17 @@ public class QuestClear() : StS2ArisCard(1, CardType.Skill, CardRarity.Uncommon,
     [
         new DynamicVar("Magic", 2m),
         ..MakeCalculatedBlock("CalculatedBlock", BaseBlock, (card, _) =>
-            ArisQuestUtils.CountCompletedQuests(card.Owner) * card.DynamicVars["Magic"].IntValue)
+        {
+            if (!card.IsMutable)
+            {
+                return 0m;
+            }
+
+            var owner = card.Owner;
+            return owner == null
+                ? 0m
+                : ArisQuestUtils.CountCompletedQuests(owner) * card.DynamicVars["Magic"].IntValue;
+        })
     ];
 
     protected override async Task OnArisPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -47,14 +57,20 @@ public class QuestClear() : StS2ArisCard(1, CardType.Skill, CardRarity.Uncommon,
     protected override void AddExtraArgsToDescription(LocString description)
     {
         base.AddExtraArgsToDescription(description);
-        if (Owner == null || CombatState != null || Pile?.Type != PileType.Deck)
+        if (!IsMutable || CombatState != null || Pile?.Type != PileType.Deck)
+        {
+            return;
+        }
+
+        var owner = Owner;
+        if (owner == null)
         {
             return;
         }
 
         decimal block = DynamicVars["CalculatedBlockBase"].BaseValue
                         + DynamicVars["CalculatedBlockExtra"].BaseValue
-                        * ArisQuestUtils.CountCompletedQuests(Owner)
+                        * ArisQuestUtils.CountCompletedQuests(owner)
                         * DynamicVars["Magic"].IntValue;
         var displayBlock = new BlockVar("CalculatedBlock", block, ValueProp.Move);
         if (DynamicVars["CalculatedBlockBase"].WasJustUpgraded)

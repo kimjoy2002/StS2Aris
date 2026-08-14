@@ -23,7 +23,7 @@ public static class ArisCombatStartCleanupPatch
 [HarmonyPatch]
 public static class ArisChargeTurnCleanupPatch
 {
-    private const string MethodName = nameof(CombatManager.EndPlayerTurnPhaseTwoInternal);
+    private const string MethodName = "EndPlayerTurnPhaseTwoInternal";
     private const string CombatTurnStateTypeName = "MegaCrit.Sts2.Core.Combat.CombatTurnState";
 
     public static MethodBase TargetMethod()
