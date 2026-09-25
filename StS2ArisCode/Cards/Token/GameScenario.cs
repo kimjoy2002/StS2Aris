@@ -438,7 +438,7 @@ public class GameScenario() : StS2ArisCard(1, CardType.Skill, CardRarity.Token, 
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(ScenarioDamage, ValueProp.Move),
+        new GameScenarioDamageVar(ScenarioDamage, ValueProp.Move),
         new DynamicVar("Hits", ScenarioDamageHits),
         new BlockVar(ScenarioBlock, ValueProp.Move),
         new CardsVar(ScenarioCards),
