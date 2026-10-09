@@ -26,6 +26,8 @@ public static class ArisChargeResourcePatches
     [HarmonyPrefix]
     public static bool SpendResourcesPrefix(CardModel __instance, ref Task<(int, int)> __result)
     {
+        ArisCharge.ClearSpent(__instance);
+
         if (__instance.Owner?.PlayerCombatState == null)
         {
             ArisCharge.SetEnergyWasEmptyBeforeSpend(__instance, false);
@@ -40,5 +42,18 @@ public static class ArisChargeResourcePatches
 
         __result = ArisCharge.SpendResources(__instance);
         return false;
+    }
+
+    [HarmonyPatch(typeof(CardModel), nameof(CardModel.OnPlayWrapper))]
+    [HarmonyPrefix]
+    public static void OnPlayWrapperPrefix(CardModel __instance, bool isAutoPlay, ref ResourceInfo resources)
+    {
+        if (isAutoPlay)
+        {
+            return;
+        }
+
+        // Charge pays the card's cost without counting as energy actually spent.
+        resources = resources with { EnergyValue = resources.EnergyValue + ArisCharge.GetSpent(__instance) };
     }
 }

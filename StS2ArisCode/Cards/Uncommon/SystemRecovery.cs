@@ -13,7 +13,7 @@ public class SystemRecovery() : StS2ArisCard(1, CardType.Power, CardRarity.Uncom
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("SelfDamage", 2m),
+        new DynamicVar("SelfDamage", SystemRecoveryPower.SelfDamage),
         new PowerVar<SystemRecoveryPower>(1m)
     ];
 

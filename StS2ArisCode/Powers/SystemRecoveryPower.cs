@@ -14,7 +14,7 @@ namespace StS2Aris.StS2ArisCode.Powers;
 public sealed class SystemRecoveryPower : StS2ArisPower, IAddDumbVariablesToPowerDescription
 {
     private const int HandThreshold = 2;
-    private const int SelfDamage = 3;
+    internal const int SelfDamage = 2;
     private bool _triggeredThisTurn;
     private bool _turnEnding;
     private bool _triggerPending;
