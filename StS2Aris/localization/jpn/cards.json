@@ -271,6 +271,8 @@
   "STS2ARIS-LUMINOUS_NOVA.description": "[gold]装備[/gold]：鍵。\n[gold]クラスチェンジ[/gold]：{ChargePower:chargeIcon()}を得る。\n[gold]ジョブ効果[/gold]：[gold]オーバーロード[/gold]効果が常に発動する。自分のターン開始時、カードを{Cards:diff()}枚引く。",
   "STS2ARIS-AUTO_HUNT.title": "俺だけレベルアップ",
   "STS2ARIS-AUTO_HUNT.description": "自分のターン開始時、[gold]レベルアップ[/gold]を使用する。",
+  "STS2ARIS-COMPETITIVE_QUEST.title": "競争クエスト",
+  "STS2ARIS-COMPETITIVE_QUEST.description": "{Damage:diff()}ダメージを与える。\n[gold]クエスト[/gold]: 他のプレイヤーとのじゃんけんに勝つ。\n[gold]報酬[/gold]: このカードのダメージが永続的に2倍になる。",
   "STS2ARIS-COURAGE_MAGIC.title": "勇気の魔法",
   "STS2ARIS-COURAGE_MAGIC.description": "自分以外のすべての味方が{ChargePower:chargeIcon()}を得る。それらの{chargeIcon}はこのターン終了時に失われない。"
 }

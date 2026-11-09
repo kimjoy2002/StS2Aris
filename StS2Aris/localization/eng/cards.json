@@ -269,6 +269,8 @@
   "STS2ARIS-FRIENDS_WALKING_TOGETHER.description": "At the start of your turn, add {FriendsWalkingTogetherPower:diff()} [gold]Luminous Nova Shot[/gold] to your [gold]Hand[/gold].",
   "STS2ARIS-LUMINOUS_NOVA_SHOT.title": "Luminous Nova Shot",
   "STS2ARIS-LUMINOUS_NOVA_SHOT.description": "Deal {Damage:diff()} damage.\nGain {ChargePower:chargeIcon()}.\n[gold]Overload[/gold]: Increase the damage of all [gold]Luminous Nova Shot[/gold] cards by {Increase:diff()} this combat.",
+  "STS2ARIS-COMPETITIVE_QUEST.title": "Competitive Quest",
+  "STS2ARIS-COMPETITIVE_QUEST.description": "Deal {Damage:diff()} damage.\n[gold]Quest[/gold]: Win Rock, Paper, Scissors against another player.\n[gold]Reward[/gold]: Permanently double this card's damage.",
   "STS2ARIS-USAGI_FLAP.title": "Usagi Flap",
   "STS2ARIS-USAGI_FLAP.description": "[gold]Equipment[/gold]: Rabbit Squad.\n[gold]Class Change[/gold]: Not implemented.\n[gold]Job Effect[/gold]: Not implemented.",
   "STS2ARIS-LUMINOUS_NOVA.title": "Luminous Nova",

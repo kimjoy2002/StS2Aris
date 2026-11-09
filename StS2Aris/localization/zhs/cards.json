@@ -271,6 +271,8 @@
   "STS2ARIS-LUMINOUS_NOVA.description": "[gold]装备[/gold]：钥匙。\n[gold]转职[/gold]：获得{ChargePower:chargeIcon()}。\n[gold]职业效果[/gold]：[gold]超荷[/gold]效果始终触发。你的回合开始时，抽{Cards:diff()}张牌。",
   "STS2ARIS-AUTO_HUNT.title": "我独自升级",
   "STS2ARIS-AUTO_HUNT.description": "你的回合开始时，打出1张[gold]等级提升[/gold]。",
+  "STS2ARIS-COMPETITIVE_QUEST.title": "竞争任务",
+  "STS2ARIS-COMPETITIVE_QUEST.description": "造成{Damage:diff()}点伤害。\n[gold]任务[/gold]：在猜拳中战胜其他玩家。\n[gold]奖励[/gold]：这张牌的伤害永久翻倍。",
   "STS2ARIS-COURAGE_MAGIC.title": "勇气的魔法",
   "STS2ARIS-COURAGE_MAGIC.description": "除你以外的所有玩家获得{ChargePower:chargeIcon()}。\n本回合结束时，他们的{chargeIcon}不会消失。"
 }

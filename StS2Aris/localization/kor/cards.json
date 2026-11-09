@@ -269,6 +269,8 @@
     "STS2ARIS-FRIENDS_WALKING_TOGETHER.description":  "내 턴 시작 시, [gold]루미너스 노바 사격[/gold]을 {FriendsWalkingTogetherPower:diff()}장 [gold]손[/gold]으로 가져옵니다.",
     "STS2ARIS-LUMINOUS_NOVA_SHOT.title":  "루미너스 노바 사격",
     "STS2ARIS-LUMINOUS_NOVA_SHOT.description":  "피해를 {Damage:diff()} 줍니다.\n{ChargePower:chargeIcon()}을 얻습니다.\n[gold]과부하[/gold]: 이번 전투 동안 모든 [gold]루미너스 노바 사격[/gold] 카드의 피해량이 {Increase:diff()} 증가합니다.",
+    "STS2ARIS-COMPETITIVE_QUEST.title":  "경쟁 퀘스트",
+    "STS2ARIS-COMPETITIVE_QUEST.description":  "피해를 {Damage:diff()} 줍니다.\n[gold]퀘스트[/gold]: 다른 플레이어와의 가위바위보에서 승리합니다.\n[gold]보상[/gold]: 이 카드의 피해량이 영구적으로 2배가 됩니다.",
     "STS2ARIS-USAGI_FLAP.title":  "Usagi Flap",
     "STS2ARIS-USAGI_FLAP.description":  "[gold]장비[/gold]: 토끼 소대.\n[gold]클래스체인지[/gold]: 미구현.\n[gold]직업 효과[/gold]: 미구현.",
     "STS2ARIS-LUMINOUS_NOVA.title":  "루미너스 노바",
