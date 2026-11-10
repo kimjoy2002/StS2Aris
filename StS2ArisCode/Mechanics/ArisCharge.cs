@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 using StS2Aris.StS2ArisCode.Keywords;
 using StS2Aris.StS2ArisCode.Hooks;
 using StS2Aris.StS2ArisCode.Powers;
+using StS2Aris.StS2ArisCode.Relics;
 
 namespace StS2Aris.StS2ArisCode.Mechanics;
 
@@ -100,7 +101,10 @@ public static class ArisCharge
         }
     }
 
-    public static bool CanSpendCharge(CardModel card) => card is not IArisOutputCard && !card.Keywords.Contains(ArisKeywords.Output);
+    public static bool HasOutput(CardModel card) => card is IArisOutputCard || card.Keywords.Contains(ArisKeywords.Output);
+
+    public static bool CanSpendCharge(CardModel card) => !HasOutput(card)
+        || (card.IsMutable && card.Owner?.Relics.OfType<Joystick>().Any(relic => relic.CanIgnoreOutput(card)) == true);
 
     public static bool HasEnoughResourcesFor(PlayerCombatState state, Player player, CardModel card, out UnplayableReason reason)
     {
@@ -166,6 +170,11 @@ public static class ArisCharge
         }
 
         ChargeSpentField.Set(card, chargeSpent);
+
+        if (chargeSpent > 0 && HasOutput(card))
+        {
+            player.Relics.OfType<Joystick>().FirstOrDefault(relic => relic.CanIgnoreOutput(card))?.ConsumeOutputBypass();
+        }
 
         if (energySpent > 0)
         {

@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Models;
 using StS2Aris.StS2ArisCode.Cards;
+using StS2Aris.StS2ArisCode.Relics;
 using ArisCharacter = StS2Aris.StS2ArisCode.Character.StS2Aris;
 
 namespace StS2Aris.StS2ArisCode.Mechanics;
@@ -13,6 +14,15 @@ public static class ArisQuestProgress
     private static readonly SavedSpireField<Player, string> CompletedQuestTypes = new(() => "", "ArisCompletedQuestTypes");
 
     private const char QuestTypeSeparator = '|';
+
+    public static async Task NotifyCompleted(Player player, CardModel questCard, int count = 1)
+    {
+        foreach (var sticker in player.Relics.OfType<ArisPraiseSticker>().ToList())
+        {
+            await sticker.OnQuestCompleted(count);
+        }
+        await BingoBoard.AdvanceBoardsForCompletedQuest(player, questCard);
+    }
 
     public static int CountCompletedQuests(Player? player)
     {

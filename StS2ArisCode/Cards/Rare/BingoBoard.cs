@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using StS2Aris.StS2ArisCode.Character;
 using StS2Aris.StS2ArisCode.Keywords;
+using StS2Aris.StS2ArisCode.Mechanics;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 
@@ -91,7 +92,7 @@ public class BingoBoard() : ArisQuestCard<BingoBoard>(1, CardType.Power, CardRar
     protected override async Task BeforeQuestComplete()
     {
         _isCompleting = true;
-        await AdvanceBoardsForCompletedQuest(Owner, this);
+        await ArisQuestProgress.NotifyCompleted(Owner, this);
     }
 
     private bool TryRecordQuest(CardModel questCard)

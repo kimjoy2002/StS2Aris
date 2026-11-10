@@ -1,4 +1,13 @@
 ﻿{
+  "STS2ARIS-ARIS_PRAISE_STICKER.title": "아리스의 칭찬 스티커",
+  "STS2ARIS-ARIS_PRAISE_STICKER.description": "[gold]퀘스트[/gold]를 달성할 때마다 체력을 [blue]{Heal}[/blue] 회복합니다.",
+  "STS2ARIS-ARIS_PRAISE_STICKER.flavor": "모든 것이 잘 되고, 행운 스탯이 오르는! 것은 아니지만... 아리스의 마음이 가득 담겨 있다.",
+  "STS2ARIS-MASKED_COMMANDER.title": "가면의 지휘관",
+  "STS2ARIS-MASKED_COMMANDER.description": "매 전투 시작 시, [gold]소멸[/gold]이 붙은 무작위 [gold]장비[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다. 이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
+  "STS2ARIS-MASKED_COMMANDER.flavor": "내가 도적 카드를 낼 때까지... 잠깐 아리스, 게임을 잘못 가져왔어!",
+  "STS2ARIS-JOYSTICK.title": "조이스틱",
+  "STS2ARIS-JOYSTICK.description": "매 턴마다 한 번씩 [gold]출력[/gold]을 무시합니다. 비용이 X인 카드의 [gold]출력[/gold]은 무시할 수 없습니다.",
+  "STS2ARIS-JOYSTICK.flavor": "\"선생님! 방금 커맨드를 정확히 1프레임에 맞춰서 입력하면 필살기의 후딜을 지울 수 있습니다!\"",
     "STS2ARIS-ARIS_BASE_RELIC.title":  "강화 마법입니다!",
     "STS2ARIS-ARIS_BASE_RELIC.description":  "매 전투마다 처음 [gold]클래스체인지[/gold]가 발동할 때 {ChargePower:chargeIcon(0)}을 얻습니다.",
     "STS2ARIS-ARIS_BASE_RELIC.flavor":  "\"아리스는 키보토스에, 마법이 없다고 생각하지 않습니다.\"",

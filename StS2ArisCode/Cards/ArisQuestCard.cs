@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using StS2Aris.StS2ArisCode.Utils;
+using StS2Aris.StS2ArisCode.Mechanics;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 
@@ -142,7 +143,7 @@ public abstract class ArisQuestCard<TReward>(int cost, CardType type, CardRarity
         await ApplyQuestReward();
         if (this is not BingoBoard)
         {
-            await BingoBoard.AdvanceBoardsForCompletedQuest(Owner, this);
+            await ArisQuestProgress.NotifyCompleted(Owner, this);
         }
     }
 

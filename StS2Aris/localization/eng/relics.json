@@ -1,4 +1,13 @@
 {
+  "STS2ARIS-ARIS_PRAISE_STICKER.title": "Aris' Praise Sticker",
+  "STS2ARIS-ARIS_PRAISE_STICKER.description": "Whenever you complete a [gold]Quest[/gold], heal [blue]{Heal}[/blue] HP.",
+  "STS2ARIS-ARIS_PRAISE_STICKER.flavor": "It won't make everything go smoothly or boost your Luck stat...but it is filled with Aris' heartfelt support.",
+  "STS2ARIS-MASKED_COMMANDER.title": "Maestra of the Masquerade",
+  "STS2ARIS-MASKED_COMMANDER.description": "At the start of each combat, add a random [gold]Equipment[/gold] card with [gold]Exhaust[/gold] to your [gold]Hand[/gold]. It is free to play this turn.",
+  "STS2ARIS-MASKED_COMMANDER.flavor": "Until you play a Rogue card... Wait, Aris, you brought the wrong game!",
+  "STS2ARIS-JOYSTICK.title": "Joystick",
+  "STS2ARIS-JOYSTICK.description": "Once each turn, ignore [gold]Output[/gold]. Cannot ignore [gold]Output[/gold] on X-cost cards.",
+  "STS2ARIS-JOYSTICK.flavor": "\"Sensei! If you enter that command with frame-perfect timing, you can cancel the recovery of your special move!\"",
   "STS2ARIS-ARIS_BASE_RELIC.title": "Enhancement Magic!",
   "STS2ARIS-ARIS_BASE_RELIC.description": "The first time [gold]Class Change[/gold] triggers each combat, gain {ChargePower:chargeIcon(0)}.",
   "STS2ARIS-ARIS_BASE_RELIC.flavor": "\"Aris does not believe that magic is absent from Kivotos.\"",

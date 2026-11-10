@@ -1,4 +1,13 @@
 {
+  "STS2ARIS-ARIS_PRAISE_STICKER.title": "爱丽丝的花丸贴纸",
+  "STS2ARIS-ARIS_PRAISE_STICKER.description": "每当你完成一个[gold]任务[/gold]，回复[blue]{Heal}[/blue]点生命。",
+  "STS2ARIS-ARIS_PRAISE_STICKER.flavor": "让一切顺利，还能提升幸运属性！虽然没有这样的效果……但其中满载着爱丽丝的心意。",
+  "STS2ARIS-MASKED_COMMANDER.title": "变装大师",
+  "STS2ARIS-MASKED_COMMANDER.description": "每场战斗开始时，将1张带有[gold]消耗[/gold]的随机[gold]装备[/gold]牌加入你的[gold]手牌[/gold]。这张牌在本回合免费打出。",
+  "STS2ARIS-MASKED_COMMANDER.flavor": "直到你使用潜行者牌……等等，爱丽丝，你拿错游戏了！",
+  "STS2ARIS-JOYSTICK.title": "摇杆",
+  "STS2ARIS-JOYSTICK.description": "每回合可以无视一次[gold]产能[/gold]。无法无视X费卡牌的[gold]产能[/gold]。",
+  "STS2ARIS-JOYSTICK.flavor": "“老师！如果刚才的指令能精确到1帧输入，就能取消必杀技的后摇！”",
   "STS2ARIS-ARIS_BASE_RELIC.title": "强化魔法！",
   "STS2ARIS-ARIS_BASE_RELIC.description": "每场战斗中第一次触发[gold]转职[/gold]时，获得{ChargePower:chargeIcon(0)}。",
   "STS2ARIS-ARIS_BASE_RELIC.flavor": "“爱丽丝觉得在基沃托斯魔法并不是空想。”",

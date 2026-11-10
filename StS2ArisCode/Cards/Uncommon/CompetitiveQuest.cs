@@ -77,7 +77,7 @@ public class CompetitiveQuest() : StS2ArisCard(2, CardType.Attack, CardRarity.Un
         DoubleBaseDamage();
         ArisQuestProgress.MarkCompleted(this);
         CardCmd.Preview(this, 0.5f);
-        await BingoBoard.AdvanceBoardsForCompletedQuest(Owner, this);
+        await ArisQuestProgress.NotifyCompleted(Owner, this);
     }
 
     public Task<CardPileAddResult?> ApplyReplicaReward(bool forceUpgrade)

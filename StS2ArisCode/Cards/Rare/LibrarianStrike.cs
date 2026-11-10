@@ -131,7 +131,7 @@ public class LibrarianStrike() : StS2ArisCard(0, CardType.Attack, CardRarity.Rar
         ArisQuestProgress.MarkCompleted(this);
         QuestRemaining = QuestGoalValue;
         CardCmd.Preview(this, 0.5f);
-        await BingoBoard.AdvanceBoardsForCompletedQuest(Owner, this);
+        await ArisQuestProgress.NotifyCompleted(Owner, this);
     }
 
     private void EnsureQuestInitialized()

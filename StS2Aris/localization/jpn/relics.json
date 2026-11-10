@@ -1,4 +1,13 @@
 {
+  "STS2ARIS-ARIS_PRAISE_STICKER.title": "アリスの花丸シール",
+  "STS2ARIS-ARIS_PRAISE_STICKER.description": "[gold]クエスト[/gold]を達成するたび、HPを[blue]{Heal}[/blue]回復する。",
+  "STS2ARIS-ARIS_PRAISE_STICKER.flavor": "何もかもうまくいき、幸運のステータスが上がる！わけではないけれど……アリスの真心がいっぱい詰まっている。",
+  "STS2ARIS-MASKED_COMMANDER.title": "十面相のマエストラ",
+  "STS2ARIS-MASKED_COMMANDER.description": "戦闘開始時、[gold]廃棄[/gold]を持つランダムな[gold]装備[/gold]カード1枚を[gold]手札[/gold]に加える。そのカードはこのターン、コストを支払わずにプレイできる。",
+  "STS2ARIS-MASKED_COMMANDER.flavor": "ローグ用カードを手札から使用するまで……待って、アリス。持ってきたゲームが違うよ！",
+  "STS2ARIS-JOYSTICK.title": "ジョイスティック",
+  "STS2ARIS-JOYSTICK.description": "毎ターン1回、[gold]出力[/gold]を無視する。Xコストのカードの[gold]出力[/gold]は無視できない。",
+  "STS2ARIS-JOYSTICK.flavor": "「先生！さっきのコマンドを1フレームぴったりのタイミングで入力すると、必殺技の硬直をキャンセルできます！」",
   "STS2ARIS-ARIS_BASE_RELIC.title": "強化魔法です！",
   "STS2ARIS-ARIS_BASE_RELIC.description": "各戦闘で最初に[gold]クラスチェンジ[/gold]が発動した時、{ChargePower:chargeIcon(0)}を得る。",
   "STS2ARIS-ARIS_BASE_RELIC.flavor": "「アリスはキヴォトスに魔法がないとは思いません。」",

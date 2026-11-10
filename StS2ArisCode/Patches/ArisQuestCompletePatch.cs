@@ -9,7 +9,6 @@ using MegaCrit.Sts2.Core.Models.Relics;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Random;
 using StS2Aris.StS2ArisCode.Mechanics;
-using ArisBingoBoard = StS2Aris.StS2ArisCode.Cards.BingoBoard;
 using ArisCharacter = StS2Aris.StS2ArisCode.Character.StS2Aris;
 
 namespace StS2Aris.StS2ArisCode.Patches;
@@ -138,7 +137,7 @@ public static class ArisQuestCompletePatch
         {
             if (PendingQuestCompletions.Remove(questCard))
             {
-                await ArisBingoBoard.AdvanceBoardsForCompletedQuest(questCard.Owner, questCard);
+                await ArisQuestProgress.NotifyCompleted(questCard.Owner, questCard);
             }
         }
     }
@@ -153,6 +152,6 @@ public static class ArisQuestCompletePatch
         var eggCard = eggCards[0];
         ArisQuestProgress.MarkCompletedQuestType(player, eggCard.Id.Entry);
         ArisQuestProgress.MarkCompleted(player, eggCards.Count);
-        await ArisBingoBoard.AdvanceBoardsForCompletedQuest(player, eggCard);
+        await ArisQuestProgress.NotifyCompleted(player, eggCard, eggCards.Count);
     }
 }
