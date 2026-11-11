@@ -1,0 +1,8 @@
+{
+  "STS2ARIS-CHARGE_POTION.title": "電力ポーション",
+  "STS2ARIS-CHARGE_POTION.description": "[gold]電力[/gold][blue]{ChargePower}[/blue]を得る。",
+  "STS2ARIS-SHOCK_POTION.title": "感電ポーション",
+  "STS2ARIS-SHOCK_POTION.description": "[gold]感電[/gold][blue]{ShockPower}[/blue]を付与する。",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.title": "転職の霊薬",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.description": "現在装備している[gold]装備[/gold]の[gold]クラスチェンジ[/gold]効果を[blue]{Repeat}[/blue]回発動する。"
+}

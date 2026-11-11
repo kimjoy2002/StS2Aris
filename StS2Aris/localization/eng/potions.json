@@ -1,0 +1,8 @@
+{
+  "STS2ARIS-CHARGE_POTION.title": "Charge Potion",
+  "STS2ARIS-CHARGE_POTION.description": "Gain [blue]{ChargePower}[/blue] [gold]Charge[/gold].",
+  "STS2ARIS-SHOCK_POTION.title": "Shock Potion",
+  "STS2ARIS-SHOCK_POTION.description": "Apply [blue]{ShockPower}[/blue] [gold]Shock[/gold].",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.title": "Class Change Elixir",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.description": "Trigger the [gold]Class Change[/gold] effect of your equipped [gold]Equipment[/gold] [blue]{Repeat}[/blue] times."
+}

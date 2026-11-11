@@ -1,0 +1,8 @@
+{
+  "STS2ARIS-CHARGE_POTION.title": "充能药水",
+  "STS2ARIS-CHARGE_POTION.description": "获得[blue]{ChargePower}[/blue]层[gold]充能[/gold]。",
+  "STS2ARIS-SHOCK_POTION.title": "感电药水",
+  "STS2ARIS-SHOCK_POTION.description": "给予[blue]{ShockPower}[/blue]层[gold]感电[/gold]。",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.title": "转职灵药",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.description": "触发当前[gold]装备[/gold]的[gold]转职[/gold]效果[blue]{Repeat}[/blue]次。"
+}

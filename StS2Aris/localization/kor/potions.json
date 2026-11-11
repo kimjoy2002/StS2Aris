@@ -1,0 +1,8 @@
+{
+  "STS2ARIS-CHARGE_POTION.title": "전력 포션",
+  "STS2ARIS-CHARGE_POTION.description": "[gold]전력[/gold]을 [blue]{ChargePower}[/blue] 얻습니다.",
+  "STS2ARIS-SHOCK_POTION.title": "감전 포션",
+  "STS2ARIS-SHOCK_POTION.description": "[gold]감전[/gold]을 [blue]{ShockPower}[/blue] 부여합니다.",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.title": "전직의 비약",
+  "STS2ARIS-CLASS_CHANGE_ELIXIR.description": "현재 장착한 [gold]장비[/gold]의 [gold]클래스체인지[/gold] 효과를 [blue]{Repeat}[/blue]번 발동합니다."
+}
