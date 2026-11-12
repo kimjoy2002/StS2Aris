@@ -17,7 +17,7 @@ namespace StS2Aris.StS2ArisCode.Cards;
 [Pool(typeof(StS2ArisCardPool))]
 public class RaidAddiction() : ArisQuestCard<RaidersLeader>(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
-    public override int QuestGoal => 3;
+    public override int QuestGoal => 2;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [

@@ -4,128 +4,135 @@ size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Alice_maid
-  rotate: false
-  xy: 405, 685
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Alice_Defend_maid
-  rotate: false
-  xy: 1, 685
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Alice_Defend_idol
-  rotate: false
-  xy: 1005, 303
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Alice
-  rotate: false
-  xy: 1, 1289
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Alice_Defend_Crowbar
-  rotate: false
-  xy: 1611, 1
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-idol
-  rotate: false
-  xy: 405, 1289
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Alice_Defend_necromancer
-  rotate: false
-  xy: 405, 987
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Alice_Defend
-  rotate: false
-  xy: 1409, 303
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Kei
-  rotate: false
-  xy: 1207, 303
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
 Alice_Defend_rogue
-  rotate: false
-  xy: 803, 1
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
-Kei_Defend
   rotate: false
   xy: 1207, 1
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
+Kei_Defend
+  rotate: false
+  xy: 607, 1209
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
 Alice_dead
   rotate: false
-  xy: 1813, 303
+  xy: 1611, 303
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Regent
   rotate: false
-  xy: 203, 987
+  xy: 1005, 303
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Alice_dead_1
   rotate: false
-  xy: 203, 685
+  xy: 1409, 303
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Alice_Defend_regent
   rotate: false
-  xy: 203, 1289
+  xy: 203, 987
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Alice_dead_2
   rotate: false
-  xy: 405, 383
+  xy: 405, 987
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_Defend_Staff
+  rotate: false
+  xy: 1813, 1
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Alice_dead_3
   rotate: false
-  xy: 203, 383
+  xy: 607, 605
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_maid
+  rotate: false
+  xy: 1409, 1
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_Defend_maid
+  rotate: false
+  xy: 1611, 1
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_Defend_idol
+  rotate: false
+  xy: 1, 1289
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice
+  rotate: false
+  xy: 1813, 303
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_Defend_Crowbar
+  rotate: false
+  xy: 1, 685
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+idol
+  rotate: false
+  xy: 405, 685
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_Defend_necromancer
+  rotate: false
+  xy: 405, 1289
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Alice_Defend
+  rotate: false
+  xy: 803, 303
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Kei
+  rotate: false
+  xy: 1, 1591
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Crowbar2
   rotate: false
-  xy: 1, 987
+  xy: 1207, 303
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
@@ -139,91 +146,98 @@ supernova
   index: -1
 woodenstick
   rotate: false
-  xy: 607, 1511
+  xy: 203, 1591
   size: 200, 200
   orig: 200, 200
   offset: 0, 0
   index: -1
 sword
   rotate: false
-  xy: 1, 1591
+  xy: 203, 1793
   size: 218, 125
   orig: 218, 125
   offset: 0, 0
   index: -1
 rogue
   rotate: false
-  xy: 1005, 1
+  xy: 405, 383
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 WizardHat
   rotate: false
-  xy: 607, 383
+  xy: 1, 1893
   size: 160, 121
   orig: 160, 121
   offset: 0, 0
   index: -1
 Devil
   rotate: false
-  xy: 607, 907
+  xy: 1, 987
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 monkStaff
   rotate: false
-  xy: 1611, 303
+  xy: 1005, 1
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 GuardianThonsDefend
   rotate: false
-  xy: 1813, 1
+  xy: 203, 383
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 GuardianThons
   rotate: false
-  xy: 1, 383
+  xy: 203, 1289
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 eye
   rotate: false
-  xy: 769, 383
+  xy: 163, 1893
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
 Necromancer
   rotate: false
-  xy: 803, 303
+  xy: 607, 1511
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Defect
   rotate: false
-  xy: 607, 1209
+  xy: 607, 907
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Rabbit
   rotate: false
-  xy: 607, 605
+  xy: 1, 383
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 Hoshino
   rotate: false
-  xy: 1409, 1
+  xy: 203, 685
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Staff
+  rotate: false
+  xy: 803, 1
   size: 200, 300
   orig: 200, 300
   offset: 0, 0

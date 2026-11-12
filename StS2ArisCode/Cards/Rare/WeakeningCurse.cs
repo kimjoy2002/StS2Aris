@@ -49,7 +49,6 @@ public class WeakeningCurse() : StS2ArisCard(1, CardType.Skill, CardRarity.Rare,
     protected override void OnUpgrade()
     {
         DynamicVars["Magic"].UpgradeValueBy(3m);
-        DynamicVars["ReturnTurns"].UpgradeValueBy(1m);
     }
 }
 

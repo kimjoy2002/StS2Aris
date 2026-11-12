@@ -27,7 +27,7 @@ public class RaidersLeader() : StS2ArisCard(2, CardType.Attack, CardRarity.Token
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(21, ValueProp.Move),
+        new DamageVar(19, ValueProp.Move),
         new DynamicVar("Magic", 2m)
     ];
 
@@ -42,7 +42,7 @@ public class RaidersLeader() : StS2ArisCard(2, CardType.Attack, CardRarity.Token
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(6m);
+        DynamicVars.Damage.UpgradeValueBy(3m);
         DynamicVars["Magic"].UpgradeValueBy(1m);
     }
 }

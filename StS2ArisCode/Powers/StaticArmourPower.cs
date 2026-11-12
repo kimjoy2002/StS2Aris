@@ -26,7 +26,13 @@ public sealed class StaticArmourPower : StS2ArisPower
             return;
         }
 
+        var enemy = Owner.Player.RunState.Rng.CombatTargets.NextItem(combatState.HittableEnemies);
+        if (enemy == null)
+        {
+            return;
+        }
+
         Flash();
-        await PowerCmd.Apply<ShockPower>(choiceContext, combatState.HittableEnemies, Amount, Owner, cardSource);
+        await PowerCmd.Apply<ShockPower>(choiceContext, enemy, Amount, Owner, cardSource);
     }
 }
