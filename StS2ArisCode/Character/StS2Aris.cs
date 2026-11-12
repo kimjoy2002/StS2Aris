@@ -50,6 +50,9 @@ public class StS2Aris : PlaceholderCharacterModel
     public override CardPoolModel CardPool => ModelDb.CardPool<StS2ArisCardPool>();
     public override RelicPoolModel RelicPool => ModelDb.RelicPool<StS2ArisRelicPool>();
     public override PotionPoolModel PotionPool => ModelDb.PotionPool<StS2ArisPotionPool>();
+    public override string CustomEnergyCounterPath => "res://StS2Aris/scenes/aris_energy_counter.tscn";
+    public override Color EnergyLabelOutlineColor => new("10104d");
+
     protected override IEnumerable<string> ExtraAssetPaths =>
     [
         "aris_charge.png".CharacterUiPath(),
