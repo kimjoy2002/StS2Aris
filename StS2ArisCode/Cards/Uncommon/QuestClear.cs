@@ -57,7 +57,8 @@ public class QuestClear() : StS2ArisCard(1, CardType.Skill, CardRarity.Uncommon,
     protected override void AddExtraArgsToDescription(LocString description)
     {
         base.AddExtraArgsToDescription(description);
-        if (!IsMutable || CombatState != null || Pile?.Type != PileType.Deck)
+        if (!IsMutable || CombatState != null ||
+            (Pile?.Type != PileType.Deck && UpgradePreviewType != CardUpgradePreviewType.Deck))
         {
             return;
         }
