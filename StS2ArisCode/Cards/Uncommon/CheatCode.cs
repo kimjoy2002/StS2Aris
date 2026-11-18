@@ -12,6 +12,7 @@ using StS2Aris.StS2ArisCode.Character;
 using StS2Aris.StS2ArisCode.CardModels;
 using StS2Aris.StS2ArisCode.Keywords;
 using StS2Aris.StS2ArisCode.Powers;
+using FreeCardPower = StS2Aris.StS2ArisCode.Powers.FreeCardPower;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 [Pool(typeof(StS2ArisCardPool))]

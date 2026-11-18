@@ -44,8 +44,8 @@ public abstract class ClassAltarRelic : StS2ArisRelic
             .WithFlags(CardCreationFlags.NoCardPoolModifications);
         await RewardsCmd.OfferCustom(Owner,
         [
-            new CardReward(options, 3, Owner),
-            new CardReward(options, 3, Owner)
+            CardRewardCompat.Create(options, 3, Owner),
+            CardRewardCompat.Create(options, 3, Owner)
         ]);
     }
 

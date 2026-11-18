@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Rewards;
 using MegaCrit.Sts2.Core.Runs;
 using StS2Aris.StS2ArisCode.Cards;
+using StS2Aris.StS2ArisCode.Utils;
 
 namespace StS2Aris.StS2ArisCode.Relics;
 public class GameManual : StS2ArisRelic
@@ -32,7 +33,7 @@ public class GameManual : StS2ArisRelic
         List<Reward> rewards = [];
         for (int i = 0; i < DynamicVars.Cards.IntValue; i++)
         {
-            rewards.Add(new CardReward(options, 3, Owner));
+            rewards.Add(CardRewardCompat.Create(options, 3, Owner));
         }
 
         await RewardsCmd.OfferCustom(Owner, rewards);
