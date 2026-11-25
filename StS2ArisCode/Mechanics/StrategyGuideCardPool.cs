@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Extensions;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Encounters;
 using MegaCrit.Sts2.Core.Random;
+using StS2Aris.StS2ArisCode.Utils;
 using CoreCards = MegaCrit.Sts2.Core.Models.Cards;
 
 namespace StS2Aris.StS2ArisCode.Mechanics;
@@ -115,7 +116,7 @@ public static class StrategyGuideCardPool
         var card = player.Creature.CombatState?.CreateCard(canonical, player) ?? player.RunState.CreateCard(canonical, player);
         if (upgraded && card.IsUpgradable)
         {
-            card.UpgradeInternal();
+            CardCmdCompat.UpgradeInternal(card);
             card.FinalizeUpgradeInternal();
         }
 

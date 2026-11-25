@@ -24,6 +24,27 @@ public static class CardCmdCompat
                    && parameters[3].ParameterType == typeof(bool);
         });
 
+    private static readonly MethodInfo? UpgradeInternalMethod = typeof(CardModel)
+        .GetMethod(nameof(CardModel.UpgradeInternal), Type.EmptyTypes)
+        ?? typeof(CardModel).GetMethod(nameof(CardModel.UpgradeInternal), [typeof(bool)]);
+
+    public static void UpgradeInternal(CardModel card)
+    {
+        if (UpgradeInternalMethod == null)
+        {
+            throw new MissingMethodException(typeof(CardModel).FullName, nameof(CardModel.UpgradeInternal));
+        }
+
+        try
+        {
+            UpgradeInternalMethod.Invoke(card, UpgradeInternalMethod.GetParameters().Length == 0 ? null : [false]);
+        }
+        catch (TargetInvocationException ex) when (ex.InnerException != null)
+        {
+            throw ex.InnerException;
+        }
+    }
+
     public static async Task Exhaust(
         PlayerChoiceContext choiceContext,
         CardModel card,

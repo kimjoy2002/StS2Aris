@@ -62,7 +62,7 @@ public static class ArisQuestUtils
         var reward = quest.Owner.RunState.CreateCard<TReward>(quest.Owner);
         if (forceUpgrade || quest.IsUpgraded)
         {
-            reward.UpgradeInternal();
+            CardCmdCompat.UpgradeInternal(reward);
             reward.FinalizeUpgradeInternal();
         }
 
@@ -81,7 +81,7 @@ public static class ArisQuestUtils
         CardModel reward = quest.Owner.RunState.CreateCard(canonicalReward, quest.Owner);
         if (forceUpgrade || quest.IsUpgraded)
         {
-            reward.UpgradeInternal();
+            CardCmdCompat.UpgradeInternal(reward);
             reward.FinalizeUpgradeInternal();
         }
 

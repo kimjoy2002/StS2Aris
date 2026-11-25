@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Nodes.CommonUi;
 using MegaCrit.Sts2.Core.Rooms;
 using StS2Aris.StS2ArisCode.Character;
 using StS2Aris.StS2ArisCode.Keywords;
+using StS2Aris.StS2ArisCode.Utils;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 
@@ -45,7 +46,7 @@ public class HellDifficulty() : ArisQuestCard<StrategyGuide>(1, CardType.Skill, 
                 var reward = combatState.CreateCard<StrategyGuide>(Owner);
                 if (combatCopy.IsUpgraded)
                 {
-                    reward.UpgradeInternal();
+                    CardCmdCompat.UpgradeInternal(reward);
                     reward.FinalizeUpgradeInternal();
                 }
 

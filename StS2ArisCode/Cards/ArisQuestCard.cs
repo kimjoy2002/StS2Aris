@@ -89,7 +89,7 @@ public abstract class ArisQuestCard<TReward>(int cost, CardType type, CardRarity
         TReward reward = Owner.RunState.CreateCard<TReward>(Owner);
         if (RewardInheritsUpgrade && IsUpgraded)
         {
-            reward.UpgradeInternal();
+            CardCmdCompat.UpgradeInternal(reward);
             reward.FinalizeUpgradeInternal();
         }
 
@@ -112,7 +112,7 @@ public abstract class ArisQuestCard<TReward>(int cost, CardType type, CardRarity
         CardModel reward = CreateRewardCard();
         if (forceUpgrade && !reward.IsUpgraded && reward.IsUpgradable)
         {
-            reward.UpgradeInternal();
+            CardCmdCompat.UpgradeInternal(reward);
             reward.FinalizeUpgradeInternal();
         }
 
@@ -127,7 +127,7 @@ public abstract class ArisQuestCard<TReward>(int cost, CardType type, CardRarity
         }
 
         CardModel upgradedCopy = (CardModel)MutableClone();
-        upgradedCopy.UpgradeInternal();
+        CardCmdCompat.UpgradeInternal(upgradedCopy);
         return upgradedCopy.DynamicVars[dynamicVarName].BaseValue;
     }
 

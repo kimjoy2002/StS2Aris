@@ -11,6 +11,7 @@ using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
 using StS2Aris.StS2ArisCode.Character;
 using StS2Aris.StS2ArisCode.Keywords;
+using StS2Aris.StS2ArisCode.Utils;
 
 namespace StS2Aris.StS2ArisCode.Cards;
 
@@ -53,7 +54,7 @@ public class TemporaryWeapon() : ArisQuestCard<TemporaryWeapon>(1, CardType.Atta
         var reward = Owner.RunState.CreateCard(canonical, Owner);
         if (IsUpgraded && reward.IsUpgradable)
         {
-            reward.UpgradeInternal();
+            CardCmdCompat.UpgradeInternal(reward);
             reward.FinalizeUpgradeInternal();
         }
 

@@ -27,7 +27,7 @@ public abstract class ClassAltarRelic : StS2ArisRelic
             CardModel equipment = CreateEquipment(Owner);
             while (equipment.IsUpgradable && equipment.CurrentUpgradeLevel < superNova.CurrentUpgradeLevel)
             {
-                equipment.UpgradeInternal();
+                CardCmdCompat.UpgradeInternal(equipment);
                 equipment.FinalizeUpgradeInternal();
             }
 
